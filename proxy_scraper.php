@@ -86,7 +86,7 @@ $data_list = file_get_contents('list.txt');
 $array_proxy = explode("\n",trim($data_list));
 $i = 1;
 foreach($array_proxy as $proxy){
-	$simpan = check($domain,false,false,"http://www.google.com/");
+	$simpan = check($domain,false,$proxy,"http://www.google.com/");
 	if($simpan["result"] != "" ){
 		if($i == 1){
 			$fp = fopen('list_fix.txt', 'w');
